@@ -3,6 +3,7 @@
 USE EstrelaDaMorte
 
 --****** PLANETAS
+
 CREATE TABLE Planetas(
 	IdPlaneta int NOT NULL,
 	Nome varchar(50) NOT NULL,
@@ -17,6 +18,7 @@ ALTER TABLE Planetas ADD CONSTRAINT PK_Planetas PRIMARY KEY (IdPlaneta);
 GO
 
 --****** NAVES 
+
 CREATE TABLE Naves(
 	IdNave int NOT NULL,
 	Nome varchar(100) NOT NULL,
@@ -30,6 +32,7 @@ ALTER TABLE Naves ADD CONSTRAINT PK_Naves PRIMARY KEY (IdNave);
 GO
 
 --****** PILOTOS
+
 CREATE TABLE Pilotos(
 	IdPiloto int NOT NULL,
 	Nome varchar(200) NOT NULL,
@@ -46,6 +49,7 @@ ALTER TABLE Pilotos CHECK CONSTRAINT FK_Pilotos_Planetas
 GO
 
 --****** PILOTOS NAVES
+
 CREATE TABLE PilotosNaves(
 	IdPiloto int NOT NULL,
 	IdNave int NOT NULL,
@@ -64,6 +68,7 @@ ALTER TABLE PilotosNaves  ADD CONSTRAINT DF_PilotosNaves_FlagAutorizado  DEFAULT
 GO
 
 --****** HISTÓRICO DE VIAGENS
+
 CREATE TABLE HistoricoViagens(
 	IdNave int NOT NULL,
 	IdPiloto int NOT NULL,
